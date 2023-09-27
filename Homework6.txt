@@ -1,0 +1,207 @@
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson6$ cat > user3.sh
+
+#!/bin/bash
+
+for n in {1..3}
+
+do
+
+echo $USER
+
+donestudent@Ubuntu-MySQL-VirtualBox:~/lws/lesson6$ cat user3.sh
+
+#!/bin/bash
+
+for n in {1..3}
+
+do
+
+echo $USER
+
+donestudent@Ubuntu-MySQL-VirtualBox:~/lws/lesson6$ nano user3.sh
+
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson6$ cat user3.sh
+
+#!/bin/bash
+
+for n in {1..3}
+
+do
+
+echo $USER
+
+done
+
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson6$ bash user3.sh
+
+student
+
+student
+
+student
+
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson6$
+
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson6$
+
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson6$
+
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson6$ cat > 100.sh
+
+#!bin/bash/
+
+x=0
+
+while [ $x -lt 102 ]
+
+do
+
+echo $x
+
+x=$(( $x + 2 ))
+
+done
+
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson6$ cat 100.sh
+
+#!bin/bash/
+
+x=0
+
+while [ $x -lt 102 ]
+
+do
+
+echo $x
+
+x=$(( $x + 2 ))
+
+done
+
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson6$
+
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson6$ bash 100.sh
+
+0
+
+2
+
+4
+
+6
+
+8
+
+10
+
+12
+
+14
+
+16
+
+18
+
+20
+
+22
+
+24
+
+26
+
+28
+
+30
+
+32
+
+34
+
+36
+
+38
+
+40
+
+42
+
+44
+
+46
+
+48
+
+50
+
+52
+
+54
+
+56
+
+58
+
+60
+
+62
+
+64
+
+66
+
+68
+
+70
+
+72
+
+74
+
+76
+
+78
+
+80
+
+82
+
+84
+
+86
+
+88
+
+90
+
+92
+
+94
+
+96
+
+98
+
+100
+
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson6$
+
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson6$ nano test.txt
+
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson6$ crontab -e
+
+crontab: installing new crontab
+
+"/tmp/crontab.7y6ksz/crontab":0: bad minute
+
+errors in crontab file, can't install.
+
+Do you want to retry the same edit? (y/n) y
+
+crontab: installing new crontab
+
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson6$ crontab -l
+
+*/10 * * * * cat /home/student/lws/lesson6/test.txt > /home/student/lws/lesson6/test.txt.bak
+
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson6$
