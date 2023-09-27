@@ -1,0 +1,341 @@
+student@Ubuntu-MySQL-VirtualBox:~$ cd lws
+
+student@Ubuntu-MySQL-VirtualBox:~/lws$ cd lesson7
+
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson7$ echo "deb http://nginx.org/packages/ubuntu focal nginx" > nginx.list
+
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson7$ sudo apt update
+
+[sudo] пароль для student:
+
+Сущ:1 http://security.ubuntu.com/ubuntu bionic-security InRelease
+
+Сущ:2 http://ru.archive.ubuntu.com/ubuntu bionic InRelease
+
+Сущ:3 http://ru.archive.ubuntu.com/ubuntu bionic-updates InRelease
+
+Пол:4 http://ru.archive.ubuntu.com/ubuntu bionic-backports InRelease [83,3 kB]
+
+Получено 83,3 kB за 2с (47,3 kB/s)
+
+Чтение списков пакетов… Готово
+
+Построение дерева зависимостей
+
+Чтение информации о состоянии… Готово
+
+Может быть обновлено 4 пакета. Запустите «apt list --upgradable» для их показа.
+
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson7$ sudo apt install nginx -y
+
+Чтение списков пакетов… Готово
+
+Построение дерева зависимостей
+
+Чтение информации о состоянии… Готово
+
+Следующие НОВЫЕ пакеты будут установлены:
+
+nginx
+
+Обновлено 0 пакетов, установлено 1 новых пакетов, для удаления отмечено 0 пакетов, и 4 пакетов не обновлено.
+
+Необходимо скачать 3 596 B архивов.
+
+После данной операции объём занятого дискового пространства возрастёт на 44,0 kB.
+
+Пол:1 http://ru.archive.ubuntu.com/ubuntu bionic-updates/main amd64 nginx all 1.14.0-0ubuntu1.11 [3 596 B]
+
+Получено 3 596 B за 0с (42,3 kB/s)
+
+Выбор ранее не выбранного пакета nginx.
+
+(Чтение базы данных … на данный момент установлено 137522 файла и каталога.)
+
+Подготовка к распаковке …/nginx_1.14.0-0ubuntu1.11_all.deb …
+
+Распаковывается nginx (1.14.0-0ubuntu1.11) …
+
+Настраивается пакет nginx (1.14.0-0ubuntu1.11) …
+
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson7$ sudo dpkg -r nginx
+
+(Чтение базы данных … на данный момент установлено 137524 файла и каталога.)
+
+Удаляется nginx (1.14.0-0ubuntu1.11) …
+
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson7$
+
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson7$ snap search postman
+
+Name Version Publisher Notes Summary
+
+postman 10.12.0 postman-inc✓ - API Development Environment
+
+restfox 0.0.7 flawid - Lightweight REST / HTTP Client
+
+my-electron-app 2.3.0 starship-postman - A Starship port of Electron's hello world app
+
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson7$ sudo snap install postman
+
+snap "postman" is already installed, see 'snap help refresh'
+
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson7$ postman
+
+ERROR: ld.so: object 'libgtk3-nocsd.so.0' from LD_PRELOAD cannot be preloaded (failed to map segment from shared object): ignored.
+
+The disableGPU setting is set to undefined
+
+Not disabling GPU
+
+Gtk-Message: 12:48:35.873: Failed to load module "canberra-gtk-module"
+
+Gtk-Message: 12:48:35.932: Failed to load module "canberra-gtk-module"
+
+[2815:0407/124836.586696:ERROR:object_proxy.cc(623)] Failed to call method: org.freedesktop.DBus.ListActivatableNames: object_path= /org/freedesktop/DBus: org.freedesktop.DBus.Error.AccessDenied: An AppArmor policy prevents this sender from sending this message to this recipient; type="method_call", sender=":1.99" (uid=1000 pid=2815 comm="/snap/postman/199/usr/share/postman/postman --no-s" label="snap.postman.postman (enforce)") interface="org.freedesktop.DBus" member="ListActivatableNames" error name="(unset)" requested_reply="0" destination="org.freedesktop.DBus" (bus)
+
+ProtocolHandler~setDefaultProtocolClient: Command failed: xdg-mime default Postman.desktop x-scheme-handler/postman
+
+/bin/sh: 1: xdg-mime: not found
+
+[3028:0407/124837.364635:ERROR:angle_platform_impl.cc(44)] Display.cpp:966 (initialize): ANGLE Display::initialize error 12289: Could not dlopen libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory
+
+[3028:0407/124837.365463:ERROR:gl_surface_egl.cc(808)] EGL Driver message (Critical) eglInitialize: Could not dlopen libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory
+
+[3028:0407/124837.365697:ERROR:gl_surface_egl.cc(1430)] eglInitialize OpenGL failed with error EGL_NOT_INITIALIZED, trying next display type
+
+[3028:0407/124837.366524:ERROR:angle_platform_impl.cc(44)] Display.cpp:966 (initialize): ANGLE Display::initialize error 12289: Could not dlopen libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory
+
+[3028:0407/124837.366788:ERROR:gl_surface_egl.cc(808)] EGL Driver message (Critical) eglInitialize: Could not dlopen libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory
+
+[3028:0407/124837.367076:ERROR:gl_surface_egl.cc(1430)] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+
+[3028:0407/124837.367282:ERROR:gl_ozone_egl.cc(20)] GLSurfaceEGL::InitializeOneOff failed.
+
+Error org.freedesktop.DBus.Error.Failed: cannot find desktop file "/var/lib/snapd/desktop/applications/postman_Postman.desktop"
+
+[3028:0407/124837.676642:ERROR:viz_main_impl.cc(188)] Exiting GPU process due to errors during initialization
+
+[3053:0407/124837.854269:ERROR:angle_platform_impl.cc(44)] Display.cpp:966 (initialize): ANGLE Display::initialize error 12289: Could not dlopen libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory
+
+[3053:0407/124837.854800:ERROR:gl_surface_egl.cc(808)] EGL Driver message (Critical) eglInitialize: Could not dlopen libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory
+
+[3053:0407/124837.855478:ERROR:gl_surface_egl.cc(1430)] eglInitialize OpenGL failed with error EGL_NOT_INITIALIZED, trying next display type
+
+[3053:0407/124837.855923:ERROR:angle_platform_impl.cc(44)] Display.cpp:966 (initialize): ANGLE Display::initialize error 12289: Could not dlopen libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory
+
+[3053:0407/124837.856880:ERROR:gl_surface_egl.cc(808)] EGL Driver message (Critical) eglInitialize: Could not dlopen libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory
+
+[3053:0407/124837.857002:ERROR:gl_surface_egl.cc(1430)] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+
+[3053:0407/124837.857146:ERROR:gl_ozone_egl.cc(20)] GLSurfaceEGL::InitializeOneOff failed.
+
+[3053:0407/124837.889833:ERROR:viz_main_impl.cc(188)] Exiting GPU process due to errors during initialization
+
+[3063:0407/124838.134878:ERROR:angle_platform_impl.cc(44)] Display.cpp:966 (initialize): ANGLE Display::initialize error 12289: Could not dlopen libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory
+
+[3063:0407/124838.145338:ERROR:gl_surface_egl.cc(808)] EGL Driver message (Critical) eglInitialize: Could not dlopen libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory
+
+[3063:0407/124838.160759:ERROR:gl_surface_egl.cc(1430)] eglInitialize OpenGL failed with error EGL_NOT_INITIALIZED, trying next display type
+
+[3063:0407/124838.161457:ERROR:angle_platform_impl.cc(44)] Display.cpp:966 (initialize): ANGLE Display::initialize error 12289: Could not dlopen libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory
+
+[3063:0407/124838.161679:ERROR:gl_surface_egl.cc(808)] EGL Driver message (Critical) eglInitialize: Could not dlopen libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory
+
+[3063:0407/124838.161788:ERROR:gl_surface_egl.cc(1430)] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+
+[3063:0407/124838.161886:ERROR:gl_ozone_egl.cc(20)] GLSurfaceEGL::InitializeOneOff failed.
+
+[3063:0407/124838.229260:ERROR:viz_main_impl.cc(188)] Exiting GPU process due to errors during initialization
+
+1680860918499 main info "Booting Postman 10.12.0, linux-4.15.0-208-generic on x64"
+
+1680860918524 main info "EventBus~initialize - Success"
+
+1680860918658 main info "Proxy configuration has not been setup"
+
+1680860918686 main info "CloudProxyManager~init - Success"
+
+[3077:0407/124838.779547:ERROR:angle_platform_impl.cc(44)] Display.cpp:966 (initialize): ANGLE Display::initialize error 12289: Could not dlopen libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory
+
+[3077:0407/124838.780062:ERROR:gl_surface_egl.cc(808)] EGL Driver message (Critical) eglInitialize: Could not dlopen libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory
+
+[3077:0407/124838.780184:ERROR:gl_surface_egl.cc(1430)] eglInitialize OpenGL failed with error EGL_NOT_INITIALIZED, trying next display type
+
+[3077:0407/124838.780552:ERROR:angle_platform_impl.cc(44)] Display.cpp:966 (initialize): ANGLE Display::initialize error 12289: Could not dlopen libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory
+
+[3077:0407/124838.780689:ERROR:gl_surface_egl.cc(808)] EGL Driver message (Critical) eglInitialize: Could not dlopen libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory
+
+[3077:0407/124838.780796:ERROR:gl_surface_egl.cc(1430)] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+
+[3077:0407/124838.780895:ERROR:gl_ozone_egl.cc(20)] GLSurfaceEGL::InitializeOneOff failed.
+
+1680860918839 main info "performShellDataMigration: Starting shell data migration"
+
+1680860918868 main info "migrateShellData:Starting"
+
+[3077:0407/124838.871921:ERROR:viz_main_impl.cc(188)] Exiting GPU process due to errors during initialization
+
+1680860919112 main info "migrateShellData: Old storage cleaned up"
+
+[3085:0407/124839.201920:ERROR:angle_platform_impl.cc(44)] Display.cpp:966 (initialize): ANGLE Display::initialize error 12289: Could not dlopen libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory
+
+[3085:0407/124839.202689:ERROR:gl_surface_egl.cc(808)] EGL Driver message (Critical) eglInitialize: Could not dlopen libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory
+
+[3085:0407/124839.202862:ERROR:gl_surface_egl.cc(1430)] eglInitialize OpenGL failed with error EGL_NOT_INITIALIZED, trying next display type
+
+[3085:0407/124839.203387:ERROR:angle_platform_impl.cc(44)] Display.cpp:966 (initialize): ANGLE Display::initialize error 12289: Could not dlopen libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory
+
+[3085:0407/124839.203566:ERROR:gl_surface_egl.cc(808)] EGL Driver message (Critical) eglInitialize: Could not dlopen libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory
+
+[3085:0407/124839.203945:ERROR:gl_surface_egl.cc(1430)] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+
+[3085:0407/124839.204059:ERROR:gl_ozone_egl.cc(20)] GLSurfaceEGL::InitializeOneOff failed.
+
+[3085:0407/124839.281574:ERROR:viz_main_impl.cc(188)] Exiting GPU process due to errors during initialization
+
+[3100:0407/124840.153313:ERROR:angle_platform_impl.cc(44)] Display.cpp:966 (initialize): ANGLE Display::initialize error 12289: Could not dlopen libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory
+
+[3100:0407/124840.226929:ERROR:gl_surface_egl.cc(808)] EGL Driver message (Critical) eglInitialize: Could not dlopen libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory
+
+[3100:0407/124840.227573:ERROR:gl_surface_egl.cc(1430)] eglInitialize OpenGL failed with error EGL_NOT_INITIALIZED, trying next display type
+
+[3100:0407/124840.228780:ERROR:angle_platform_impl.cc(44)] Display.cpp:966 (initialize): ANGLE Display::initialize error 12289: Could not dlopen libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory
+
+[3100:0407/124840.229235:ERROR:gl_surface_egl.cc(808)] EGL Driver message (Critical) eglInitialize: Could not dlopen libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory
+
+[3100:0407/124840.229355:ERROR:gl_surface_egl.cc(1430)] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+
+[3100:0407/124840.229625:ERROR:gl_ozone_egl.cc(20)] GLSurfaceEGL::InitializeOneOff failed.
+
+[3100:0407/124840.321368:ERROR:viz_main_impl.cc(188)] Exiting GPU process due to errors during initialization
+
+[3108:0407/124840.489268:ERROR:angle_platform_impl.cc(44)] Display.cpp:966 (initialize): ANGLE Display::initialize error 12289: Could not dlopen libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory
+
+[3108:0407/124840.529312:ERROR:gl_surface_egl.cc(808)] EGL Driver message (Critical) eglInitialize: Could not dlopen libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory
+
+[3108:0407/124840.532853:ERROR:gl_surface_egl.cc(1430)] eglInitialize OpenGL failed with error EGL_NOT_INITIALIZED, trying next display type
+
+[3108:0407/124840.533605:ERROR:angle_platform_impl.cc(44)] Display.cpp:966 (initialize): ANGLE Display::initialize error 12289: Could not dlopen libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory
+
+[3108:0407/124840.536201:ERROR:gl_surface_egl.cc(808)] EGL Driver message (Critical) eglInitialize: Could not dlopen libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory
+
+[3108:0407/124840.536493:ERROR:gl_surface_egl.cc(1430)] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+
+[3108:0407/124840.536627:ERROR:gl_ozone_egl.cc(20)] GLSurfaceEGL::InitializeOneOff failed.
+
+[3108:0407/124840.613464:ERROR:viz_main_impl.cc(188)] Exiting GPU process due to errors during initialization
+
+[3116:0407/124840.862375:ERROR:angle_platform_impl.cc(44)] Display.cpp:966 (initialize): ANGLE Display::initialize error 12289: Could not dlopen libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory
+
+[3116:0407/124840.876158:ERROR:gl_surface_egl.cc(808)] EGL Driver message (Critical) eglInitialize: Could not dlopen libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory
+
+[3116:0407/124840.876436:ERROR:gl_surface_egl.cc(1430)] eglInitialize OpenGL failed with error EGL_NOT_INITIALIZED, trying next display type
+
+[3116:0407/124840.878017:ERROR:angle_platform_impl.cc(44)] Display.cpp:966 (initialize): ANGLE Display::initialize error 12289: Could not dlopen libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory
+
+[3116:0407/124840.878424:ERROR:gl_surface_egl.cc(808)] EGL Driver message (Critical) eglInitialize: Could not dlopen libGL.so.1: libGL.so.1: cannot open shared object file: No such file or directory
+
+[3116:0407/124840.878558:ERROR:gl_surface_egl.cc(1430)] eglInitialize OpenGLES failed with error EGL_NOT_INITIALIZED
+
+[3116:0407/124840.884849:ERROR:gl_ozone_egl.cc(20)] GLSurfaceEGL::InitializeOneOff failed.
+
+[3116:0407/124840.952244:ERROR:viz_main_impl.cc(188)] Exiting GPU process due to errors during initialization
+
+[3129:0407/124841.813526:ERROR:sandbox_linux.cc(377)] InitializeSandbox() called with multiple threads in process gpu-process.
+
+[3129:0407/124842.189046:ERROR:gpu_memory_buffer_support_x11.cc(44)] dri3 extension not supported.
+
+1680860924225 main info "migrateShellData: Got data from shell. Writing to storage"
+
+1680860924281 main info "performShellDataMigration: Migration successful on try count 1"
+
+1680860924332 main info "UpdateHandler~init - Success"
+
+1680860924367 main info "LeaderSelection: Initialized successfully"
+
+1680860924379 main info "VersionDependencyService: Initialized successfully"
+
+error reading fileError: ENOENT: no such file or directory, open '/home/student/snap/postman/199/.config/Postman/proxy/postman-proxy-ca.crt'
+
+1680860924558 main info "Generated root certificate for linux"
+
+1680860924595 main info "LinuxAutoUpdater~Cleanup - Initial cleanup successful"
+
+1680860924748 main info "GPU detected VID 0 DID 0 ACTIVE false"
+
+1680860925108 main info "shellController~init: Success"
+
+1680860925276 main info "shellMeta~init: Success"
+
+1680860925278 main info "partitionMigrationService: State of V7 partition:"
+
+1680860925280 main info "partitionMigrationService: V7 partitions",[]
+
+1680860925286 main info "partitionMigrationService~rectifyNamespaceOfScratchPadPartition: There is no partition with scratchpad namespace"
+
+1680860925298 main info "partitionMigrationService~rectifyNamespaceOfScratchPadPartition: There is no transit partition which could have been used for scratchpad"
+
+1680860925307 main info "partitionMigrationService~init: Success"
+
+1680860925630 main info "partitionMigrationService~runV8PartitionsIntegrity: Two way migration~ removing the following partitions from v8",[]
+
+1680860925662 main info "userPartitionService~_rectifyTheActivePartitionOfApplication: Setting the active partition to ",null
+
+1680860925804 main info "userPartitionService~init: Success"
+
+1680860925953 main info "userPartitionService: State of v8 partition system:"
+
+1680860926009 main info "shell~init~getPartitionToLoad: loading scratchpad partition"
+
+1680860926064 main info "userPartitionService: List of partitions:",[]
+
+1680860926065 main info "userPartitionService: users global meta:",{}
+
+1680860960216 main info "RuntimeIPCAgent~started: Success"
+
+INTERCEPTOR CONNECTIVITY: Connecting to Interceptor Bridge
+
+InterceptorBridge: Trying to connect Native App IPC~Interceptor Bridge
+
+IPCClient ~ WindowHandler: New event is received { type: 'window-opened' }
+
+1680860969131 main info "windowManager: First requester booted successfully."
+
+1680860969132 main info "windowManager~restoreWindows: Restoring requester windows"
+
+1680860969153 main info "Main~AppEvents - Received booted event for process requester.Version undefined UI Version: undefined Desktop Platform Version: 10.12.0"
+
+1680860980577 main info "WindowManager~closeHandler - Closed Window (id: 2 )"
+
+IPCClient ~ WindowHandler: New event is received { type: 'window-closed', windowId: 2 }
+
+1680860980644 main info "Quitting app"
+
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson7$
+
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson7$ sudo iptables -P INPUT DROP
+
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson7$ sudo iptables -A INPUT -i etho0 -p tcp --dport 80 -j ACCEPT
+
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson7$ sudo iptables -A INPUT -i etho0 -p tcp --dport 22 -j ACCEPT
+
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson7$ sudo iptables -L
+
+Chain INPUT (policy DROP)
+
+target prot opt source destination
+
+ACCEPT tcp -- anywhere anywhere tcp dpt:http
+
+ACCEPT tcp -- anywhere anywhere tcp dpt:ssh
+
+Chain FORWARD (policy ACCEPT)
+
+target prot opt source destination
+
+Chain OUTPUT (policy ACCEPT)
+
+target prot opt source destination
+
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson7$
