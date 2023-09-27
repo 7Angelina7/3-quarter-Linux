@@ -1,0 +1,139 @@
+student@Ubuntu-MySQL-VirtualBox:~$ pwd
+/home/student
+student@Ubuntu-MySQL-VirtualBox:~$ cd lws
+student@Ubuntu-MySQL-VirtualBox:~/lws$ cd lesson02
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson02$ cd /home/student
+student@Ubuntu-MySQL-VirtualBox:~$ pwd
+/home/student
+student@Ubuntu-MySQL-VirtualBox:~$ cd -
+/home/student/lws/lesson02
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson02$ cd ..
+student@Ubuntu-MySQL-VirtualBox:~/lws$ cd ~
+student@Ubuntu-MySQL-VirtualBox:~$ pwd
+/home/student
+student@Ubuntu-MySQL-VirtualBox:~$ cd /home/student/lws/lesson02
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson02$ 
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson02$ 
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson02$ 
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson02$ cd ~
+student@Ubuntu-MySQL-VirtualBox:~$ cd ..
+student@Ubuntu-MySQL-VirtualBox:/home$ 
+student@Ubuntu-MySQL-VirtualBox:/home$ 
+student@Ubuntu-MySQL-VirtualBox:/home$ 
+student@Ubuntu-MySQL-VirtualBox:/home$ 
+student@Ubuntu-MySQL-VirtualBox:~$ pwd
+/home/student
+student@Ubuntu-MySQL-VirtualBox:~$ cd lws
+student@Ubuntu-MySQL-VirtualBox:~/lws$ cd lesson02
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson02$ cat > file1
+dfbzbzdcfb 
+dbfdzbzdcb 
+dbfdzxfbdcb
+dbf dzxfbcd
+b zdcbfdb
+dbfdzbdhfbh
+fdbdf bdzfbhzdf
+dfb dzfbhdb
+dfb zdfb zdf b
+dfb dzb dzb student@Ubuntu-MySQL-VirtualBox:~/lws/lesson02$ echo > file2.txt
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson02$ echo 123 456 789 > file3
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson02$ 
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson02$ 
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson02$ nano file2.txt
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson02$ cat file3
+123 456 789
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson02$ 
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson02$ 
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson02$ 
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson02$ vim file4
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+11111
+22222
+33333
+44444
+55555
+66666
+~                                                                                     
+~                                                                                     
+~                                                                                     
+~                                                                                     
+~                                                                                     
+~                                                                                     
+~                                                                                     
+~                                                                                     
+~                                                                                     
+~                                                                                     
+~                                                                                     
+~                                                                                     
+~                                                                                     
+~                                                                                     
+~                                                                                     
+~                                                                                     
+~                                                                                     
+:wq
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson02$ 
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson02$ 
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson02$ 
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson02$ cp file4 file44
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson02$ cp file5 file55
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson02$ mkdir 11/22/33 -p
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson02$ mkdir 44/55/66 -p
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson02$ tree
+.
+├── 11
+│   └── 22
+│       └── 33
+├── 44
+│   └── 55
+│       └── 66
+├── file1
+├── file2.txt
+├── file3
+├── file4
+├── file44
+├── file5
+└── file55
+
+6 directories, 7 files
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson02$ mv file44 11/22/33
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson02$ tree
+.
+├── 11
+│   └── 22
+│       └── 33
+│           └── file44
+├── 44
+│   └── 55
+│       └── 66
+├── file1
+├── file2.txt
+├── file3
+├── file4
+├── file5
+└── file55
+
+6 directories, 7 files
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson02$ mv file55 44/55/66
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson02$ tree
+.
+├── 11
+│   └── 22
+│       └── 33
+│           └── file44
+├── 44
+│   └── 55
+│       └── 66
+│           └── file55
+├── file1
+├── file2.txt
+├── file3
+├── file4
+└── file5
+
+6 directories, 7 files
+student@Ubuntu-MySQL-VirtualBox:~/lws/lesson02$ 
+
+
+
+ 
