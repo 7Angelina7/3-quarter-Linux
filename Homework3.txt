@@ -1,0 +1,435 @@
+student@Ubuntu-MySQL-VirtualBox:~$ sudo useradd -s /bin/bash -d /home/user88 -m user88
+
+[sudo] пароль для student:
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo passwd user88
+
+Введите новый пароль UNIX:
+
+Повторите ввод нового пароля UNIX:
+
+passwd: пароль успешно обновлён
+
+student@Ubuntu-MySQL-VirtualBox:~$ su user88
+
+Пароль:
+
+user88@Ubuntu-MySQL-VirtualBox:/home/student$ exit
+
+exit
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo userdel -r user88
+
+userdel: почтовый ящик user88 (/var/mail/user88) не найден
+
+student@Ubuntu-MySQL-VirtualBox:~$ more /etc/passwd
+
+root:x:0:0:root:/root:/bin/bash
+
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+
+sync:x:4:65534:sync:/bin:/bin/sync
+
+games:x:5:60:games:/usr/games:/usr/sbin/nologin
+
+man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
+
+lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
+
+mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
+
+news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
+
+uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
+
+proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
+
+www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+
+backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
+
+list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
+
+irc:x:39:39:ircd:/var/run/ircd:/usr/sbin/nologin
+
+gnats:x:41:41:Gnats Bug-Reporting System (admin):/var/lib/gnats:/usr/sbin/nologin
+
+nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
+
+systemd-timesync:x:100:102:systemd Time Synchronization,,,:/run/systemd:/bin/false
+
+systemd-network:x:101:103:systemd Network Management,,,:/run/systemd/netif:/bin/false
+
+systemd-resolve:x:102:104:systemd Resolver,,,:/run/systemd/resolve:/bin/false
+
+syslog:x:104:108::/home/syslog:/bin/false
+
+_apt:x:105:65534::/nonexistent:/bin/false
+
+messagebus:x:106:110::/var/run/dbus:/bin/false
+
+uuidd:x:107:111::/run/uuidd:/bin/false
+
+lightdm:x:108:114:Light Display Manager:/var/lib/lightdm:/bin/false
+
+whoopsie:x:109:117::/nonexistent:/bin/false
+
+avahi-autoipd:x:110:119:Avahi autoip daemon,,,:/var/lib/avahi-autoipd:/bin/false
+
+avahi:x:111:120:Avahi mDNS daemon,,,:/var/run/avahi-daemon:/bin/false
+
+dnsmasq:x:112:65534:dnsmasq,,,:/var/lib/misc:/bin/false
+
+colord:x:113:123:colord colour management daemon,,,:/var/lib/colord:/bin/false
+
+speech-dispatcher:x:114:29:Speech Dispatcher,,,:/var/run/speech-dispatcher:/bin/false
+
+hplip:x:115:7:HPLIP system user,,,:/var/run/hplip:/bin/false
+
+kernoops:x:116:65534:Kernel Oops Tracking Daemon,,,:/:/bin/false
+
+pulse:x:117:124:PulseAudio daemon,,,:/var/run/pulse:/bin/false
+
+rtkit:x:118:126:RealtimeKit,,,:/proc:/bin/false
+
+saned:x:119:127::/var/lib/saned:/bin/false
+
+usbmux:x:120:46:usbmux daemon,,,:/var/lib/usbmux:/bin/false
+
+student:x:1000:1000:student,,,:/home/student:/bin/bash
+
+vboxadd:x:999:1::/var/run/vboxadd:/bin/false
+
+mysql:x:121:129:MySQL Server,,,:/nonexistent:/bin/false
+
+sshd:x:122:65534::/var/run/sshd:/usr/sbin/nologin
+
+cups-pk-helper:x:103:113:user for cups-pk-helper service,,,:/home/cups-pk-helper:/usr/sbin/nologin
+
+geoclue:x:123:105::/var/lib/geoclue:/usr/sbin/nologin
+
+gdm:x:124:130:Gnome Display Manager:/var/lib/gdm3:/bin/false
+
+gnome-initial-setup:x:125:65534::/run/gnome-initial-setup/:/bin/false
+
+user55:x:1004:1004:,,,:/home/user55:/bin/bash
+
+user10:x:1001:1001:,,,:/home/user10:/bin/bash
+
+user33:x:1005:1005::/home/user33:/bin/bash
+
+user44:x:1006:1006::/home/user44:/bin/bash
+
+user22:x:1007:1007::/home/user22:/bin/bash
+
+student@Ubuntu-MySQL-VirtualBox:~$
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo mkdir /home/user99
+
+student@Ubuntu-MySQL-VirtualBox:~$
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo groupadd group1
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo groupadd group2
+
+student@Ubuntu-MySQL-VirtualBox:~$ more /etc/group
+
+root:x:0:
+
+daemon:x:1:
+
+bin:x:2:
+
+sys:x:3:
+
+adm:x:4:syslog,student
+
+tty:x:5:
+
+disk:x:6:
+
+lp:x:7:
+
+mail:x:8:
+
+news:x:9:
+
+uucp:x:10:
+
+man:x:12:
+
+proxy:x:13:
+
+kmem:x:15:
+
+dialout:x:20:
+
+fax:x:21:
+
+voice:x:22:
+
+cdrom:x:24:student
+
+floppy:x:25:
+
+tape:x:26:
+
+sudo:x:27:student
+
+audio:x:29:pulse
+
+dip:x:30:student
+
+www-data:x:33:
+
+backup:x:34:
+
+operator:x:37:
+
+list:x:38:
+
+irc:x:39:
+
+src:x:40:
+
+gnats:x:41:
+
+shadow:x:42:
+
+utmp:x:43:
+
+video:x:44:
+
+sasl:x:45:
+
+plugdev:x:46:student
+
+staff:x:50:
+
+games:x:60:
+
+users:x:100:
+
+nogroup:x:65534:
+
+systemd-journal:x:101:
+
+systemd-timesync:x:102:
+
+systemd-network:x:103:
+
+systemd-resolve:x:104:
+
+input:x:106:
+
+crontab:x:107:
+
+syslog:x:108:
+
+netdev:x:109:
+
+messagebus:x:110:
+
+uuidd:x:111:
+
+ssl-cert:x:112:
+
+lpadmin:x:113:student
+
+lightdm:x:114:
+
+nopasswdlogin:x:115:
+
+ssh:x:116:
+
+whoopsie:x:117:
+
+mlocate:x:118:
+
+avahi-autoipd:x:119:
+
+avahi:x:120:
+
+bluetooth:x:121:
+
+scanner:x:122:saned
+
+colord:x:123:
+
+pulse:x:124:
+
+pulse-access:x:125:
+
+rtkit:x:126:
+
+saned:x:127:
+
+student:x:1000:
+
+sambashare:x:128:student
+
+vboxsf:x:999:
+
+mysql:x:129:
+
+geoclue:x:105:
+
+gdm:x:130:
+
+user55:x:1004:
+
+vboxdrmipc:x:998:
+
+user10:x:1001:
+
+user33:x:1005:
+
+user44:x:1006:
+
+user22:x:1007:
+
+group1:x:1008:
+
+group2:x:1009:
+
+student@Ubuntu-MySQL-VirtualBox:~$
+
+student@Ubuntu-MySQL-VirtualBox:~$
+
+student@Ubuntu-MySQL-VirtualBox:~$
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo adduser user100
+
+Добавляется пользователь «user100» ...
+
+Добавляется новая группа «user100» (1002) ...
+
+Добавляется новый пользователь «user100» (1002) в группу «user100» ...
+
+Создаётся домашний каталог «/home/user100» ...
+
+Копирование файлов из «/etc/skel» ...
+
+Введите новый пароль UNIX:
+
+Повторите ввод нового пароля UNIX:
+
+passwd: пароль успешно обновлён
+
+Изменение информации о пользователе user100
+
+Введите новое значение или нажмите ENTER для выбора значения по умолчанию
+
+Полное имя []:
+
+Номер комнаты []:
+
+Рабочий телефон []:
+
+Домашний телефон []:
+
+Другое []:
+
+Данная информация корректна? [Y/n]
+
+student@Ubuntu-MySQL-VirtualBox:~$ group user100
+
+Command 'group' not found, did you mean:
+
+command 'groups' from deb coreutils (8.30-3ubuntu2)
+
+command 'grop' from deb grop (2:0.10-1.1build1)
+
+Try: sudo apt install <deb name>
+
+student@Ubuntu-MySQL-VirtualBox:~$ groups user100
+
+user100 : user100
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo usermod -g group1 user100
+
+student@Ubuntu-MySQL-VirtualBox:~$ groups user100
+
+user100 : group1
+
+student@Ubuntu-MySQL-VirtualBox:~$
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo usermod -g group1 user100
+
+student@Ubuntu-MySQL-VirtualBox:~$ groups user100
+
+user100 : group1
+
+student@Ubuntu-MySQL-VirtualBox:~$
+
+student@Ubuntu-MySQL-VirtualBox:~$
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo usermod -G group2 user100
+
+student@Ubuntu-MySQL-VirtualBox:~$ groups user100
+
+user100 : group1 group2
+
+student@Ubuntu-MySQL-VirtualBox:~$
+
+student@Ubuntu-MySQL-VirtualBox:~$
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo deluser user100 group2
+
+Удаляется пользователь «user100» из группы «group2» ...
+
+Готово.
+
+student@Ubuntu-MySQL-VirtualBox:~$ groups user100
+
+user100 : group1
+
+student@Ubuntu-MySQL-VirtualBox:~$
+
+student@Ubuntu-MySQL-VirtualBox:~$
+
+student@Ubuntu-MySQL-VirtualBox:~$ sudo usermod -a -G sudo user100
+
+student@Ubuntu-MySQL-VirtualBox:~$ groups user100
+
+user100 : group1 sudo
+
+student@Ubuntu-MySQL-VirtualBox:~$
+
+student@Ubuntu-MySQL-VirtualBox:~$
+
+student@Ubuntu-MySQL-VirtualBox:~$ su user100
+
+Пароль:
+
+To run a command as administrator (user "root"), use "sudo <command>".
+
+See "man sudo_root" for details.
+
+user100@Ubuntu-MySQL-VirtualBox:/home/student$ sudo apt update
+
+[sudo] пароль для user100:
+
+Сущ:1 http://ru.archive.ubuntu.com/ubuntu bionic InRelease
+
+Пол:2 http://ru.archive.ubuntu.com/ubuntu bionic-updates InRelease [88,7 kB]
+
+Пол:3 http://ru.archive.ubuntu.com/ubuntu bionic-backports InRelease [83,3 kB]
+
+Пол:4 http://security.ubuntu.com/ubuntu bionic-security InRelease [88,7 kB]
+
+Получено 261 kB за 6с (43,3 kB/s)
+
+Чтение списков пакетов… Готово
+
+Построение дерева зависимостей
+
+Чтение информации о состоянии… Готово
+
+Может быть обновлено 3 пакета. Запустите «apt list --upgradable» для их показа.
+
+user100@Ubuntu-MySQL-VirtualBox:/home/student$
